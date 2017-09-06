@@ -3,17 +3,27 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  entry: './server.js',
+  entry: {
+  	app: path.join(__dirname,'src','server.js')
+   },
   target: 'node',
   externals:[nodeExternals()],
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
       new HtmlWebpackPlugin({
+      	inject: true,
+      	chunks:['main'],
       	title: 'Elixir',
-      	template : './views/main.html',
+      	template : './src/views/main.html',
+      }),
+      new HtmlWebpackPlugin({
+      	inject:true,
+      	chunks:['index'],
+      	title: 'Elixir',
+      	template : './src/views/index.html',
       })
   ]
 };
