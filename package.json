@@ -1,0 +1,32 @@
+{
+  "name": "elixir",
+  "version": "1.0.0",
+  "description": "A Text Analyser",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack -d --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roushanj/elixir.git"
+  },
+  "author": "oliver",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roushanj/elixir/issues"
+  },
+  "homepage": "https://github.com/roushanj/elixir#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.5",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
