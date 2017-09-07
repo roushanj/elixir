@@ -11,3 +11,5 @@ app.listen(process.env.PORT || 4000, function() {
 
 	console.log('Server is running on port 4000');
 });
+
+module.exports= app; //testing
