@@ -10,19 +10,20 @@ module.exports = {
   externals:[nodeExternals()],
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'build')
   },
   plugins: [
       new HtmlWebpackPlugin({
       	inject: true,
-      	chunks:['main'],
+      	chunks:['app'],
       	title: 'Elixir',
       	template : './src/views/main.html',
       }),
       new HtmlWebpackPlugin({
       	inject:true,
-      	chunks:['index'],
+      	chunks:['app'],
       	title: 'Elixir',
+      	filename:'views/index.html',
       	template : './src/views/index.html',
       })
   ]
